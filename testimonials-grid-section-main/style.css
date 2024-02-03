@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+    --primary-violet: hsl(263, 55%, 52%);
+    --primary-dark-grayish-blue: hsl(217, 19%, 35%);
+    --primary-dark-blackish-blue: hsl(219, 29%, 14%);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-light-gray: hsl(0, 0%, 81%);
+    --neutral-light-grayish-blue: hsl(210, 46%, 95%);
+
+    --ff-barlow: 'Barlow Semi Condensed', sans-serif;
+
+    --fs-300: 0.813rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 5rem;
+
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+
+
+body{
+    background-color: var(--neutral-light-grayish-blue);
+    min-height: 100vh;
+    font-family: var(--ff-barlow);
+    font-size: var(--fs-300);
+}
+
+main{
+    margin: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card{
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+figure{
+    display: flex;
+}
+
+
+.impressions{
+    font-size: var(--fs-500);
+    font-weight: var(--fw-semibold);
+
+}
+
+.quote{
+    opacity: 0.7;
+}
+
+.verify{
+    opacity: 0.5;
+}
+
+
+
+.avatar{
+    max-width: 2rem;
+    height: auto;
+    border-radius: 100vh;
+    margin-right: 0.5rem;
+}
+
+.accent-purple{
+    background-color: var(--primary-violet);
+    color: var(--neutral-white);
+    position: relative;
+    z-index: 1;
+
+}
+.quotation{
+    position: absolute;
+    right: 5rem;
+    z-index: -1;
+}
+.accent-gray{
+    background-color: var(--primary-dark-grayish-blue);
+    color: var(--neutral-white);
+}
+.accent-white{
+    background-color: var(--neutral-white);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.accent-dark-gray{
+    background-color: var(--primary-dark-blackish-blue);
+    color: var(--neutral-white);
+}
+
+
+
+@media  (min-width: 800px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main{
+        max-width: 67rem;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas:
+            "Da Da Jo Ki"
+            "Ja Pa Pa Ki";
+    }
+
+    .card:nth-child(1){
+        grid-area: Da;
+    }
+    .card:nth-child(2){
+        grid-area: Jo;
+    }
+    .card:nth-child(3){
+        grid-area: Ja;
+    }
+    .card:nth-child(4){
+        grid-area: Pa;
+    }
+    .card:nth-child(5){
+        grid-area: Ki;
+    }
+}
+
+
+
+
+
+
+
